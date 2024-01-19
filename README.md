@@ -4,7 +4,6 @@
 
 <!-- Header Start -->
 <a href = "https://learn.microsoft.com/en-us/cpp/cpp-language"> <img height="40" img width="40" src="https://cdn.simpleicons.org/c++"> </a>
-
 <img align="right" alt="Stars Badge" src="https://img.shields.io/github/stars/jdsherbert/Audio-Phaser-Effect?label=%E2%AD%90"/>
 <img align="right" alt="Forks Badge" src="https://img.shields.io/github/forks/jdsherbert/Audio-Phaser-Effect?label=%F0%9F%8D%B4"/>
 <img align="right" alt="Watchers Badge" src="https://img.shields.io/github/watchers/jdsherbert/Audio-Phaser-Effect?label=%F0%9F%91%81%EF%B8%8F"/>
