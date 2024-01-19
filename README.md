@@ -20,6 +20,7 @@
   <img align="right" alt="License" src="https://img.shields.io/badge/License%20:%20MIT-black?style=for-the-badge&logo=mit&logoColor=white&color=black&labelColor=black"> </a>
   
 <br></br>
+
 -----------------------------------------------------------------------
 ## Overview
 A phaser is a modulation effect commonly used in audio processing to modify the frequency response of an audio signal. It falls into the category of "modulation effects" because it modulates the phase relationship between different frequency components of the signal. Phasers are often employed to create unique and dynamic sounds, adding movement and depth to audio.
