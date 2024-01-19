@@ -11,7 +11,7 @@ Phaser::Phaser(int numStages, float rate, float depth, float feedback)
     }
 }
 
-float Phaser::processSample(float input) 
+float Phaser::ProcessSample(float input) 
 {
     float output = input;
 
@@ -26,7 +26,7 @@ float Phaser::processSample(float input)
     return output;
 }
 
-void Phaser::setRate(float newRate) 
+void Phaser::SetRate(float newRate) 
 {
     rate = newRate;
     // Recalculate filter coefficients based on the new rate
@@ -44,7 +44,7 @@ Phaser::AllpassFilter::AllpassFilter()
 {
 }
 
-float Phaser::AllpassFilter::processSample(float input) 
+float Phaser::AllpassFilter::ProcessSample(float input) 
 {
     float delayedSample = delayBuffer[writeIndex];
     float output = -input + delayedSample;
@@ -55,7 +55,7 @@ float Phaser::AllpassFilter::processSample(float input)
     return output;
 }
 
-void Phaser::AllpassFilter::setRate(float newRate) 
+void Phaser::AllpassFilter::SetRate(float newRate) 
 {
     rate = newRate;
     // Adjust the delay time based on the new rate
