@@ -9,8 +9,8 @@ class Phaser
 public:
     Phaser(int numStages, float rate, float depth, float feedback);
 
-    float processSample(float input);
-    void setRate(float newRate);
+    float ProcessSample(float input);
+    void SetRate(float newRate);
 
 private:
     
@@ -19,9 +19,9 @@ private:
     public:
         AllpassFilter();
 
-        float processSample(float input);
+        float ProcessSample(float input);
 
-        void setRate(float newRate);
+        void SetRate(float newRate);
 
     private:
         std::vector<float> delayBuffer;
