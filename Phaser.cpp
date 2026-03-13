@@ -57,20 +57,20 @@ float Sherbert::Phaser::ProcessSample(float input)
     //     This deepens and sharpens the notches, making the sweep more resonant.
     // ===================================================================
  
-    // Step 1 — Advance LFO phase
+    // Step 1: Advance LFO phase
     const float lfoPhaseIncrement = 2.0f * static_cast<float>(M_PI) * rate / sampleRate;
     lfoPhase += lfoPhaseIncrement;
     if (lfoPhase >= 2.0f * static_cast<float>(M_PI))
         lfoPhase -= 2.0f * static_cast<float>(M_PI);
  
-    // Step 2 — Map LFO to cutoff frequency range
+    // Step 2: Map LFO to cutoff frequency range
     // lfo output is in (-1, 1); scale to (0, 1) then interpolate frequency range
     const float lfoOutput   = std::sin(lfoPhase);
     const float lfoNormalized = (lfoOutput * depth + 1.0f) * 0.5f;
     const float centerFrequency = lfoMinFrequency
         + lfoNormalized * (lfoMaxFrequency - lfoMinFrequency);
  
-    // Step 3 — Update each filter's coefficient with a per-stage phase offset
+    // Step 3: Update each filter's coefficient with a per-stage phase offset
     // Spreading the phase offsets distributes notches evenly across the spectrum
     const float phaseSpread = static_cast<float>(M_PI) / static_cast<float>(numStages);
     for (int i = 0; i < numStages; ++i)
@@ -82,12 +82,12 @@ float Sherbert::Phaser::ProcessSample(float input)
         allpassFilters[i].setCoefficient(calculateCoefficient(stageFc));
     }
  
-    // Step 4 — Feed input + feedback through the allpass chain
+    // Step 4: Feed input + feedback through the allpass chain
     float output = input + feedbackSample * feedback;
     for (int i = 0; i < numStages; ++i)
         output = allpassFilters[i].ProcessSample(output);
  
-    // Step 5 — Store feedback sample for next call
+    // Step 5: Store feedback sample for next call
     feedbackSample = output;
  
     return output;
