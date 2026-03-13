@@ -4,8 +4,6 @@
 <img align="right" alt="Forks Badge" src="https://img.shields.io/github/forks/jdsherbert/Audio-Phaser-Effect?label=%F0%9F%8D%B4"/>
 <img align="right" alt="Watchers Badge" src="https://img.shields.io/github/watchers/jdsherbert/Audio-Phaser-Effect?label=%F0%9F%91%81%EF%B8%8F"/>
 <img align="right" alt="Issues Badge" src="https://img.shields.io/github/issues/jdsherbert/Audio-Phaser-Effect?label=%E2%9A%A0%EF%B8%8F"/>
-<img align="right" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FJDSherbert%2FAudio-Phaser-Effect%2Fhit-counter%2FREADME&count_bg=%2379C83D&title_bg=%23555555&labelColor=0E1128&title=🔍&style=for-the-badge">
-<a href="https://learn.microsoft.com/en-us/cpp/cpp-language">
   <img height="40" width="40" src="https://cdn.simpleicons.org/cplusplus">
 </a>
 <!-- Header End -->
@@ -26,7 +24,7 @@
  
 ## Overview
  
-A phaser effect implemented in plain C++, intended as a learning resource for understanding how LFO-modulated allpass filter chains work from first principles. No libraries, no black boxes, just the DSP.
+A phaser effect implemented in plain C++, intended as a learning resource for understanding how LFO-modulated allpass filter chains work from first principles. No libraries, no bullshit, just the DSP.
  
 A phaser works by passing the signal through a chain of allpass filters whose cutoff frequencies are continuously swept by an LFO (Low Frequency Oscillator). Allpass filters shift the phase of frequencies without changing their amplitude. When this phase-shifted signal is mixed back with the dry signal via feedback, certain frequencies cancel (notches) and others reinforce (peaks). Sweeping the filter cutoffs moves these notches through the spectrum, producing the characteristic phaser "whoosh".
  
