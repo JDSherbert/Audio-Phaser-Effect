@@ -30,6 +30,7 @@ namespace Sherbert
  
     class AllpassFilter
     {
+
     public:
  
         AllpassFilter();
