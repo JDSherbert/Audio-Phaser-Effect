@@ -63,7 +63,7 @@ Changing `fc` shifts where in the spectrum the phase rotation is concentrated. T
  
 ### Step 2 — LFO Sweep
  
-A sine wave LFO advances its phase by `2π * rate / sampleRate` radians on every sample. Its output is scaled by `depth` and mapped to a cutoff frequency range (100Hz – 4000Hz):
+A sine wave LFO advances its phase by `2π * rate / sampleRate` radians on every sample. Its output is scaled by `depth` and mapped to a cutoff frequency range (100Hz ~ 4000Hz):
  
 ```
 lfoOutput     = sin(lfoPhase)
